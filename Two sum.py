@@ -1,5 +1,11 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        for num in range(len(nums)):
-            if (nums[num] + nums[num+1]):
-                return [num, num+1]
+        processed = {}
+
+        for index, value in enumerate(nums):
+            difference = target - value
+
+            if (difference in processed):
+                return [processed[difference], index]
+
+            processed[value] = index
