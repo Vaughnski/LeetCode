@@ -1,0 +1,1 @@
+return ['Fizz' * (not n % 3) + 'Buzz' * (not n % 5) or str(n) for n in range(1, (n+1))]
